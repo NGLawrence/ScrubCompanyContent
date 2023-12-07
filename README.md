@@ -2,6 +2,9 @@
 READ THE MOFOKING DIRECTIONS
 Follow these directions EXACTLY
 
+Prereq:
+Delete your SteamLibrary\steamapps\common\Lethal Company\BepInEx directory.
+
 1. On the releases page, click the latest release.
 2. Click "Source Code (zip)"
 3. Save file.
