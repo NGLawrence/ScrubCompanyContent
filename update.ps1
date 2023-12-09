@@ -24,21 +24,25 @@ echo "- Pulling new assets from GitHub
 
 "
 sleep 2
-#git reset --hard
+git reset --hard
 git pull
 
 
+
 if (Test-Path ../BepInEx -PathType Container) {
-    # Directory exists, print "Hello"
+    # Directory exists
     Write-Host "Purging existing BepInEx directory"
 	cd ..
 	rm -Force -r BepInEx
 	sleep 2
 } else {
-    # Directory does not exist, print a message or perform other actions if needed
+    # Directory does not exist
     Write-Host "The 'BepInEx' directory does not exist, no need to purge."
 	cd ..
 }
+
+rm -Force -r BepInEx
+sleep 2
 
 echo "- Moving updated BepInEx directory to correct location
 
