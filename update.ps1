@@ -10,29 +10,45 @@ echo "
 |                                          /_/                /____/     |
 |                                                                        |
 |                                                                        |
-'------------------------------------------------------------------------'"
-sleep 1
-echo "Welcome to The Company automated update tool. Please stand by."
+'------------------------------------------------------------------------'
+
+"
 sleep 2
+
+echo "Welcome to The Company automated update tool. Please stand by."
+echo 
+"
+"
+
 
 echo "Pulling new assets from GitHub"
-
+sleep 2
 git reset --hard
 git pull
+echo 
+"
+"
 
 
-
-sleep 2
 echo "Purging old BepInEx directory"
+echo 
+"
+"
 cd ..
 rm -Force -r BepInEx
+sleep 2
 
 echo "Moving updated BepInEx directory to correct location"
+echo
+"
+"
 cd ScrubCompanyContent
 cp -Force BepInEx ..
 sleep 2
+
+echo 
+"
+"
 echo "Update complete, Thank you for being a great asset to The Company."
 
-
-
-sleep 1
+sleep 2
