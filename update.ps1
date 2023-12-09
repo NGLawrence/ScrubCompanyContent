@@ -27,8 +27,6 @@ sleep 2
 git reset --hard
 git pull
 
-
-
 if (Test-Path ../BepInEx -PathType Container) {
     # Directory exists
     Write-Host "Purging existing BepInEx directory"
@@ -40,9 +38,6 @@ if (Test-Path ../BepInEx -PathType Container) {
     Write-Host "The 'BepInEx' directory does not exist, no need to purge."
 	cd ..
 }
-
-rm -Force -r BepInEx
-sleep 2
 
 echo "- Moving updated BepInEx directory to correct location
 
