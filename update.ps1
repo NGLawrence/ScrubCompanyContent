@@ -24,30 +24,62 @@ echo "- Pulling new assets from GitHub
 
 "
 sleep 2
-git reset --hard
+#git reset --hard
 git pull
 
 
-
-
-echo "
-
-- Purging old BepInEx directory
-
-"
-
-cd ..
-rm -Force -r BepInEx
-sleep 2
+if (Test-Path ../BepInEx -PathType Container) {
+    # Directory exists, print "Hello"
+    Write-Host "Purging existing BepInEx directory"
+	cd ..
+	rm -Force -r BepInEx
+	sleep 2
+} else {
+    # Directory does not exist, print a message or perform other actions if needed
+    Write-Host "The 'BepInEx' directory does not exist, no need to purge."
+	cd ..
+}
 
 echo "- Moving updated BepInEx directory to correct location
 
 "
 
 cd ScrubCompanyContent
-cp -Force BepInEx ..
+cp -Force -r BepInEx ..
 sleep 2
 
-echo "Update complete, Thank you for being a great asset to The Company."
-
+echo "Update complete. On behalf of The Company, thank you for being a great asset to The Company.
+ _____                _       ___               _     
+|  __ \              | |     / _ \             | |    
+| |  \/_ __ ___  __ _| |_   / /_\ \___ ___  ___| |_   
+| | __| '__/ _ \/ _` | __|  |  _  / __/ __|/ _ \ __|  
+| |_\ \ | |  __/ (_| | |_   | | | \__ \__ \  __/ |_   
+ \____/_|  \___|\__,_|\__|  \_| |_/___/___/\___|\__|  
+                                                      
+                                                      
+ _____                _      _____                _   
+|  __ \              | |    |  __ \              | |  
+| |  \/_ __ ___  __ _| |_   | |  \/_ __ ___  __ _| |_ 
+| | __| '__/ _ \/ _` | __|  | | __| '__/ _ \/ _` | __|
+| |_\ \ | |  __/ (_| | |_   | |_\ \ | |  __/ (_| | |_ 
+ \____/_|  \___|\__,_|\__|   \____/_|  \___|\__,_|\__|
+                                                      
+                                                      
+  ___               _     _          _____ _          
+ / _ \             | |   | |        |_   _| |         
+/ /_\ \___ ___  ___| |_  | |_ ___     | | | |__   ___ 
+|  _  / __/ __|/ _ \ __| | __/ _ \    | | | '_ \ / _ \
+| | | \__ \__ \  __/ |_  | || (_) |   | | | | | |  __/
+\_| |_/___/___/\___|\__|  \__\___/    \_/ |_| |_|\___|
+                                                      
+                                                      
+ _____                                                
+/  __ \                                               
+| /  \/ ___  _ __ ___  _ __   __ _ _ __  _   _        
+| |    / _ \| '_ ` _ \| '_ \ / _` | '_ \| | | |       
+| \__/\ (_) | | | | | | |_) | (_| | | | | |_| |       
+ \____/\___/|_| |_| |_| .__/ \__,_|_| |_|\__, |       
+                      | |                 __/ |       
+                      |_|                |___/        
+"
 sleep 5
