@@ -30,7 +30,9 @@ git pull
 
 
 
-echo "- Purging old BepInEx directory
+echo "
+
+- Purging old BepInEx directory
 
 "
 
