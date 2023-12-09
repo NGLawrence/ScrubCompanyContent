@@ -15,40 +15,37 @@ echo "
 "
 sleep 2
 
-echo "Welcome to The Company automated update tool. Please stand by."
-echo 
-"
+echo "Welcome to The Company automated update tool. Please stand by.
+
 "
 
 
-echo "Pulling new assets from GitHub"
+echo "- Pulling new assets from GitHub
+
+"
 sleep 2
 git reset --hard
 git pull
-echo 
-"
-"
 
 
-echo "Purging old BepInEx directory"
-echo 
+
+
+echo "- Purging old BepInEx directory
+
 "
-"
+
 cd ..
 rm -Force -r BepInEx
 sleep 2
 
-echo "Moving updated BepInEx directory to correct location"
-echo
+echo "- Moving updated BepInEx directory to correct location
+
 "
-"
+
 cd ScrubCompanyContent
 cp -Force BepInEx ..
 sleep 2
 
-echo 
-"
-"
 echo "Update complete, Thank you for being a great asset to The Company."
 
-sleep 2
+sleep 5
