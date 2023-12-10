@@ -62,7 +62,7 @@ if (Test-Path ../manifest.json -PathType Leaf) {
     cd ScrubCompanyContent
 } else {
     # File does not exist
-    Write-Host "The doorsmanifesttop file does not exist, no need to purge."
+    Write-Host "The manifest file does not exist, no need to purge."
     
 }
 
