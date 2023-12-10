@@ -24,11 +24,16 @@ echo "- Pulling new assets from GitHub
 
 "
 sleep 2
-#git reset --hard
+
+git reset --hard
+
+git reset --hard
+
 git pull
 
 if (Test-Path ../BepInEx -PathType Container) {
     # Directory exists
+    
     Write-Host "Purging existing BepInEx directory..."
 	cd ..
 	rm -Force -r BepInEx
@@ -109,8 +114,6 @@ sleep 2
 echo "
 
 Update complete. On behalf of The Company, thank you for being a great asset to The Company.
-
-
 
  _____                _       ___               _     
 |  __ \              | |     / _ \             | |    
