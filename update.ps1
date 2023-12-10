@@ -24,30 +24,94 @@ echo "- Pulling new assets from GitHub
 
 "
 sleep 2
-git reset --hard
+#git reset --hard
 git pull
 
 if (Test-Path ../BepInEx -PathType Container) {
     # Directory exists
-    Write-Host "Purging existing BepInEx directory"
+    Write-Host "Purging existing BepInEx directory..."
 	cd ..
 	rm -Force -r BepInEx
 	sleep 2
+    cd ScrubCompanyContent
 } else {
     # Directory does not exist
     Write-Host "The 'BepInEx' directory does not exist, no need to purge."
-	cd ..
 }
+
+
+if (Test-Path ../doorstop_config -PathType Leaf) {
+    # File exists
+    Write-Host "Purging existing doorstop_config..."
+	cd ..
+	rm -Force -r doorstop_config
+	sleep 2
+    cd ScrubCompanyContent
+} else {
+    # File does not exist
+    Write-Host "The doorstop file does not exist, no need to purge."
+    cd ScrubCompanyContent
+}
+
+if (Test-Path ../manifest -PathType Leaf) {
+    # File exists
+    Write-Host "Purging existing manifest..."
+	cd ..
+	rm -Force -r doorstop_config
+	sleep 2
+    cd ScrubCompanyContent
+} else {
+    # File does not exist
+    Write-Host "The doorsmanifesttop file does not exist, no need to purge."
+    cd ScrubCompanyContent
+}
+
+if (Test-Path ../winhttp.dll -PathType Leaf) {
+    # File exists
+    Write-Host "Purging existing winhttp dll..."
+	cd ..
+	rm -Force -r doorstop_config
+	sleep 2
+    cd ScrubCompanyContent
+} else {
+    # File does not exist
+    Write-Host "The winhtttp dll does not exist, no need to purge."
+    cd ScrubCompanyContent
+}
+
 
 echo "- Moving updated BepInEx directory to correct location
 
 "
-
-cd ScrubCompanyContent
 cp -Force -r BepInEx ..
 sleep 2
 
-echo "Update complete. On behalf of The Company, thank you for being a great asset to The Company.
+
+
+echo "- Moving updated doorstop_config file to correct location
+
+"
+cp -Force doorstop_config ..
+sleep 2
+
+echo "- Moving updated manifest file to correct location
+
+"
+cp -Force manifest ..
+sleep 2
+
+echo "- Moving updated winhttp.dll file to correct location
+
+"
+cp -Force winhttp.dll ..
+sleep 2
+
+echo "
+
+Update complete. On behalf of The Company, thank you for being a great asset to The Company.
+
+
+
  _____                _       ___               _     
 |  __ \              | |     / _ \             | |    
 | |  \/_ __ ___  __ _| |_   / /_\ \___ ___  ___| |_   
