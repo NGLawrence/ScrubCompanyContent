@@ -40,43 +40,43 @@ if (Test-Path ../BepInEx -PathType Container) {
 }
 
 
-if (Test-Path ../doorstop_config -PathType Leaf) {
+if (Test-Path ../doorstop_config.ini -PathType Leaf) {
     # File exists
     Write-Host "Purging existing doorstop_config..."
 	cd ..
-	rm -Force -r doorstop_config
+	rm -Force -r doorstop_config.ini
 	sleep 2
     cd ScrubCompanyContent
 } else {
     # File does not exist
     Write-Host "The doorstop file does not exist, no need to purge."
-    cd ScrubCompanyContent
+    
 }
 
-if (Test-Path ../manifest -PathType Leaf) {
+if (Test-Path ../manifest.json -PathType Leaf) {
     # File exists
     Write-Host "Purging existing manifest..."
 	cd ..
-	rm -Force -r doorstop_config
+	rm -Force -r manifest.json
 	sleep 2
     cd ScrubCompanyContent
 } else {
     # File does not exist
     Write-Host "The doorsmanifesttop file does not exist, no need to purge."
-    cd ScrubCompanyContent
+    
 }
 
 if (Test-Path ../winhttp.dll -PathType Leaf) {
     # File exists
     Write-Host "Purging existing winhttp dll..."
 	cd ..
-	rm -Force -r doorstop_config
+	rm -Force -r winhttp.dll
 	sleep 2
     cd ScrubCompanyContent
 } else {
     # File does not exist
     Write-Host "The winhtttp dll does not exist, no need to purge."
-    cd ScrubCompanyContent
+    
 }
 
 
@@ -91,19 +91,19 @@ sleep 2
 echo "- Moving updated doorstop_config file to correct location
 
 "
-cp -Force doorstop_config ..
+cp -Force assets/doorstop_config.ini ..
 sleep 2
 
 echo "- Moving updated manifest file to correct location
 
 "
-cp -Force manifest ..
+cp -Force assets/manifest.json ..
 sleep 2
 
 echo "- Moving updated winhttp.dll file to correct location
 
 "
-cp -Force winhttp.dll ..
+cp -Force assets/winhttp.dll ..
 sleep 2
 
 echo "
