@@ -10,22 +10,18 @@ echo "
 |                                          /_/                /____/     |
 |                                                                        |
 |                                                                        |
-'------------------------------------------------------------------------'
+'--------------------GitHub-@crroadcap-&-@NGLawrence---------------------'
 
 "
-sleep 2
+sleep 3
 
 echo "Welcome to The Company automated update tool. Please stand by.
 
 "
-
-
 echo "- Pulling new assets from GitHub
 
 "
 sleep 2
-
-git reset --hard
 
 git reset --hard
 
@@ -44,6 +40,22 @@ if (Test-Path ../BepInEx -PathType Container) {
     Write-Host "The 'BepInEx' directory does not exist, no need to purge."
 }
 
+if (Test-Path ../doorstop_config.ini -PathType Leaf) {
+    # File exists
+    Write-Host "Purging existing doorstop_config..."
+	cd ..
+	rm -Force -r doorstop_config.ini
+	sleep 2
+    cd ScrubCompanyContent
+} else {
+    # File does not exist
+    Write-Host "The doorstop file does not exist, no need to purge."  
+}
+
+if (Test-Path ../manifest.json -PathType Leaf) {
+    # File exists
+    Write-Host "Purging existing manifest..."
+	cd ..
 
 if (Test-Path ../doorstop_config.ini -PathType Leaf) {
     # File exists
@@ -55,7 +67,6 @@ if (Test-Path ../doorstop_config.ini -PathType Leaf) {
 } else {
     # File does not exist
     Write-Host "The doorstop file does not exist, no need to purge."
-    
 }
 
 if (Test-Path ../manifest.json -PathType Leaf) {
@@ -67,8 +78,7 @@ if (Test-Path ../manifest.json -PathType Leaf) {
     cd ScrubCompanyContent
 } else {
     # File does not exist
-    Write-Host "The manifest file does not exist, no need to purge."
-    
+    Write-Host "The manifest file does not exist, no need to purge."   
 }
 
 if (Test-Path ../winhttp.dll -PathType Leaf) {
@@ -80,8 +90,7 @@ if (Test-Path ../winhttp.dll -PathType Leaf) {
     cd ScrubCompanyContent
 } else {
     # File does not exist
-    Write-Host "The winhtttp dll does not exist, no need to purge."
-    
+    Write-Host "The winhtttp dll does not exist, no need to purge." 
 }
 
 
@@ -90,8 +99,6 @@ echo "- Moving updated BepInEx directory to correct location
 "
 cp -Force -r BepInEx ..
 sleep 2
-
-
 
 echo "- Moving updated doorstop_config file to correct location
 
