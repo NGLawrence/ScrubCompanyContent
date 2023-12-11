@@ -56,6 +56,23 @@ if (Test-Path ../manifest.json -PathType Leaf) {
     # File exists
     Write-Host "Purging existing manifest..."
 	cd ..
+
+if (Test-Path ../doorstop_config.ini -PathType Leaf) {
+    # File exists
+    Write-Host "Purging existing doorstop_config..."
+	cd ..
+	rm -Force -r doorstop_config.ini
+	sleep 2
+    cd ScrubCompanyContent
+} else {
+    # File does not exist
+    Write-Host "The doorstop file does not exist, no need to purge."
+}
+
+if (Test-Path ../manifest.json -PathType Leaf) {
+    # File exists
+    Write-Host "Purging existing manifest..."
+	cd ..
 	rm -Force -r manifest.json
 	sleep 2
     cd ScrubCompanyContent
@@ -75,6 +92,7 @@ if (Test-Path ../winhttp.dll -PathType Leaf) {
     # File does not exist
     Write-Host "The winhtttp dll does not exist, no need to purge." 
 }
+
 
 echo "- Moving updated BepInEx directory to correct location
 
