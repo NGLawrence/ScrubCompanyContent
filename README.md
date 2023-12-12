@@ -19,3 +19,7 @@ Windows 10:
 
 Normal Use:
 After completing the steps for the first time setup, every time after simply right click update file, and select "Run with PowerShell"
+
+
+# List of Mods included:
+- TODO
