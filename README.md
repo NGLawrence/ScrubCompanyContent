@@ -22,12 +22,12 @@ After completing the steps for the first time setup, every time after simply rig
 
 
 # List of Mods included:
-https://thunderstore.io/c/lethal-company/p/anormaltwig/LateCompany/
-https://thunderstore.io/c/lethal-company/p/bizzlemip/BiggerLobby/
-https://thunderstore.io/c/lethal-company/p/Steven/Custom_Boombox_Music/
-https://thunderstore.io/c/lethal-company/p/CodeEnder/Custom_Boombox_Fix/
-https://thunderstore.io/c/lethal-company/p/2018/LC_API/
-https://thunderstore.io/c/lethal-company/p/Suskitech/AlwaysHearActiveWalkies/
-https://thunderstore.io/c/lethal-company/p/x753/Mimics/
-https://thunderstore.io/c/lethal-company/p/NotAtomicBomb/TerminalApi/
-https://thunderstore.io/c/lethal-company/p/NotAtomicBomb/Terminal_History/
+- https://thunderstore.io/c/lethal-company/p/anormaltwig/LateCompany/
+- https://thunderstore.io/c/lethal-company/p/bizzlemip/BiggerLobby/
+- https://thunderstore.io/c/lethal-company/p/Steven/Custom_Boombox_Music/
+- https://thunderstore.io/c/lethal-company/p/CodeEnder/Custom_Boombox_Fix/
+- https://thunderstore.io/c/lethal-company/p/2018/LC_API/
+- https://thunderstore.io/c/lethal-company/p/Suskitech/AlwaysHearActiveWalkies/
+- https://thunderstore.io/c/lethal-company/p/x753/Mimics/
+- https://thunderstore.io/c/lethal-company/p/NotAtomicBomb/TerminalApi/
+- https://thunderstore.io/c/lethal-company/p/NotAtomicBomb/Terminal_History/
