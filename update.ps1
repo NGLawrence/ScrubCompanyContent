@@ -56,6 +56,7 @@ if (Test-Path ../manifest.json -PathType Leaf) {
     # File exists
     Write-Host "Purging existing manifest..."
 	cd ..
+}
 
 if (Test-Path ../doorstop_config.ini -PathType Leaf) {
     # File exists
