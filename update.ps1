@@ -91,7 +91,8 @@ if (Test-Path ../winhttp.dll -PathType Leaf) {
     cd ScrubCompanyContent
 } else {
     # File does not exist
-    Write-Host "The winhtttp dll does not exist, no need to purge." 
+    Write-Host "The winhtttp dll does not exist, no need to purge." \
+    cd ScrubCompanyContent
 }
 
 
